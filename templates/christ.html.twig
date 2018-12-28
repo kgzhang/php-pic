@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheet %}
+    .font-h-hans {
+    font-family: 'Source Han Sans CN';
+    }
+    .f-700 {
+    font-weight: 700;
+    }
+{% endblock %}
+
+{% block content %}
+<div style="position: relative; width: 375px; height: 669px;">
+    <img src="{{ bg }}" alt="" class="w-full">
+    <div style="position: absolute; left: 144px; top: 353px;">
+        <p class="font-h-hans f-700" style="font-size: 18px;;">{{ data['name'] }}</p>
+    </div>
+    <div style="position: absolute; left: 33px; top: 381px;">
+        <p class="font-h-hans f-700" style="font-size: 26px;">{{ data['tag'] }}</p>
+    </div>
+    <div style="position: absolute; left:56px; top: 522px;width: 73px;">
+        <img src="templates/images/qrcode.jpg" alt="">
+    </div>
+</div>
+{% endblock%}
